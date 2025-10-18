@@ -153,6 +153,7 @@ Factors Reducing Churn Risk:
 ```
 
 ## Author
-**Daniel Aditya Pratama**  
+**Gregorius Daniel**
+**Imaculata Viandra**
 Data Scientist | Purwadhika Bootcamp Graduate  
 [LinkedIn Profile](https://www.linkedin.com/in/danieladityapr/)
