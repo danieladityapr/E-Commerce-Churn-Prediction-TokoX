@@ -79,13 +79,13 @@ This analysis aims to:
    - Split data 80:20 for training and testing
 
 2. Feature Engineering
-   - Create derived metrics such as ComplainRate, OrderFrequency, and EngagementScore
+   - Create derived metrics such as ComplainRate & OrderFrequency
    - Perform feature selection using correlation matrix and importance ranking
 
 3. Model Development
    - Train multiple classifiers (Logistic Regression, Random Forest, XGBoost, CatBoost)
    - Perform hyperparameter tuning with grid search
-   - Finalize CatBoost model for best balance between recall and precision
+   - Finalize CatBoost model for best balance F2_Score
 
 4. Model Evaluation
    - Evaluate models using ROC-AUC, Precision-Recall curve, F2-score, and Confusion Matrix
@@ -148,6 +148,7 @@ Factors Decreasing Churn Risk
 - No data leakage across train-test splits.
 - Feature selection and preprocessing consistent across splits.
 - Train-test split ratio = 80:20 for generalization.
+- Using Final model = CatboostClassifier
 - Threshold 0.40 chosen for optimal F2.
 - Model evaluated using ROC-AUC, PR Curve, and SHAP for interpretability.
 
