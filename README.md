@@ -174,7 +174,7 @@ Factors Decreasing Churn Risk
 ```
 
 ## Author
-**Gregorius Daniel**
-**Imaculata Viandra**
+| **Gregorius Daniel** |
+| **Imaculata Viandra** |
 Data Scientist | Purwadhika Bootcamp Graduate  
 [LinkedIn Profile](https://www.linkedin.com/in/danieladityapr/)
