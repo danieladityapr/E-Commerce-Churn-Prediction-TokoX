@@ -166,8 +166,6 @@ Factors Decreasing Churn Risk
 │   └── Final_Project_Beta_fix.ipynb
 ├── app/
 │   └── streamlit_app.py
-├── visuals/
-│   └── (to be added manually)
 ├── model/
 │   └── model_catboost.sav
 ├── README.md
@@ -177,4 +175,3 @@ Factors Decreasing Churn Risk
 | **Gregorius Daniel** |
 | **Immaculata Viandra** |
 Data Scientist | Purwadhika Bootcamp Graduate |
-[LinkedIn Profile](https://www.linkedin.com/in/danieladityapr/)
