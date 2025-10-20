@@ -1,7 +1,7 @@
 # E-Commerce Customer Churn Prediction — CatBoost ML Model for TokoX
 
 ## Project Description
-This project focuses on predicting customer churn in an Indonesian e-commerce company (TokoX).
+This project focuses on predicting customer churn using ECommerce_Dataset.csv in an Indonesian e-commerce company (TokoX).
 High churn rates can significantly impact company revenue, so the goal is to build an accurate and explainable Machine Learning model to detect at-risk customers early.
 
 Using CatBoostClassifier, this project identifies key churn drivers and provides actionable business recommendations to improve customer retention and reduce churn costs.
