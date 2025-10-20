@@ -97,30 +97,43 @@ This analysis aims to:
 - Accuracy: 97%
 
 ### Key Insights
-Factors Increasing Churn Risk:
-- Low Tenure → new customers with low loyalty
-- High ComplainRate → frequent complaints signal dissatisfaction
-- High DaySinceLastOrder → inactivity indicator
-- Lower CityTier → limited logistics access and service quality
+Factors Increasing Churn Risk
+- High ComplainRate → the more complaints, the higher the likelihood of churn.
+- Low DaySinceLastOrder → customers recently made a transaction.
+- High OrderFrequency → frequent transactions may indicate churn risk.
+- High SatisfactionScore → positive experiences may raise customer expectations excessively.
+- Low CityTier → customers in areas with limited logistics are more likely to churn.
 
-Factors Reducing Churn Risk:
-- High CashbackAmount → loyalty incentive
-- Frequent OrderFrequency → consistent engagement
-- High SatisfactionScore → positive experience retention
-- Grocery category preference → stable purchase routine
+Factors Decreasing Churn Risk
+- High Tenure → long-term customers tend to be more loyal.
+- High CashbackAmount → incentives increase loyalty.
+- Active in app & grocery transactions → customers regularly use core services.
 
 ### Business Recommendations
-1. Implement daily churn scoring with threshold 0.40 for early detection.
-2. Use low-cost retention strategies (small vouchers, loyalty points, personalized reminders).
-3. Prioritize high-value customers (based on LTV) for retention incentives.
-4. Automate reminders and customer segmentation based on churn probability.
+- Customer Service (CS)
+   - Fast Response Team (<24h) with chatbot + escalation.
+   - Ticket system: Received → In Progress → Resolved → Verified.
+   - Instant compensation (USD 3–5 voucher / free shipping).
 
-### Tactical Actions
-| Segment | Characteristics | Recommended Action |
-|----------|----------------|--------------------|
-| High Risk | Low tenure, low activity, frequent complaints | Personalized push/email + small voucher |
-| Medium Risk | Decreasing engagement | Product recommendation + engagement reminder |
-| Low Risk | Active and loyal | Loyalty program, periodic cashback, appreciation messages |
+- Marketing & CRM
+   - Early Intervention for new customers (0–3 months).
+   - Personalized campaigns: thank-you email + voucher, reminder after 7 days inactive.
+   - Transactional Churn Alert: survey + auto-compensation if complaint detected.
+
+- Data Analytics / BI
+   - Build Customer Health Score (CHS) = satisfaction + complaints + frequency.
+   - Daily CHS dashboard for CS & Marketing.
+   - Weekly churn prediction report for Management.
+
+- Operations & Logistics
+   - Ensure stock for fast-moving items.
+   - Priority delivery for “At Risk” customers.
+   - SLA: 95% on-time delivery; auto-compensation for delays.
+
+- Top Management
+   - Set churn OKR (e.g., -5% in 6 months).
+   - Allocate retention budget (USD 12k/year).
+   - Quarterly review + cross-division KPI on retention.
 
 ### Data and Model Assumptions
 - Dataset represents customer behavior without sampling bias.
@@ -132,10 +145,18 @@ Factors Reducing Churn Risk:
 - Model evaluated using ROC-AUC, PR Curve, and SHAP for interpretability.
 
 ### Limitations
-1. Generalization limited to one dataset snapshot — retraining required regularly.
-2. Missing behavioral data (clickstream, CS feedback, marketing channel).
-3. No integration of Customer Lifetime Value (LTV).
-4. Predictions are probabilistic, not deterministic — should support, not replace, business judgment.
+- Temporal Drift: The model is built on historical snapshots; churn patterns may shift due to seasonal promotions, pricing changes, or competitor moves. Without regular retraining, performance may degrade.
+- Missing Features: Some relevant variables are not included (e.g., clickstream/behavioral data, acquisition channel, CS logs, specific promotions), which may omit key churn drivers.
+- No CLV Integration: The model does not account for Customer Lifetime Value, so churn predictions do not prioritize retention efforts based on economic impact.
+- Probabilistic Trade-off: Predictions are probabilities — false positives/negatives will occur. Retention actions (e.g., vouchers) must balance cost vs. expected benefit.
+- Scalability of Personal Outreach: Personalized outreach works for small at-risk segments but requires automation when the segment grows, to keep costs sustainable.
+
+### Mitigation Recommendations
+- Retraining Cadence: Retrain every 1–3 months (or after major KPI shifts) with ongoing daily/weekly monitoring.
+- Data Integration: Add clickstream, CS logs, and acquisition channel data to improve accuracy and interpretability.
+- CLV-Based Segmentation: Incorporate CLV to prioritize interventions for high-value customers.
+- A/B Testing: Test retention actions (vouchers, free shipping, outreach) to measure ROI and avoid overspending.
+- Operational Decision Rules: Combine threshold + business rules (e.g., CHS) to guide intervention levels (low-cost automation vs. high-touch outreach).
 
 ## Repository Structure
 ```
