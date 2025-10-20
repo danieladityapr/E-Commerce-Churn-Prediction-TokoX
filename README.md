@@ -1,3 +1,10 @@
+## Final Project JCDSOH02-001
+
+Beta Team :
+
+- Gregorius Daniel Aditya Pratama
+- Immaculata Viandra
+
 # E-Commerce Customer Churn Prediction — CatBoost ML Model for TokoX
 
 ## Project Description
