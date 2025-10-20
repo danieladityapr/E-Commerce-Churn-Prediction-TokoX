@@ -173,7 +173,7 @@ Factors Decreasing Churn Risk
 ├── notebook/
 │   └── Final_Project_Beta_fix.ipynb
 ├── app/
-│   └── streamlit_app.py
+│   └── Churn_Pred.py
 ├── model/
 │   └── model_catboost.sav
 ├── README.md
